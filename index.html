@@ -1,132 +1,873 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <title>Essodeke's Online Resume</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essodéké PANIZI — Supply Chain Ops & Data</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#0a0a0a; --bg2:#111; --bg3:#181818;
+  --surface:#1c1c1c; --surface2:#242424;
+  --border:rgba(255,255,255,0.07); --border2:rgba(255,255,255,0.13);
+  --text:#e8e4dc; --text2:#a8a49c; --text3:#6a6660;
+  --gold:#c9a84c; --gold-l:#e8c97a;
+  --gold-bg:rgba(201,168,76,0.08); --gold-b:rgba(201,168,76,0.22);
+  --teal:#2ab889; --teal-l:#7dd9b8;
+  --teal-bg:rgba(42,184,137,0.08); --teal-b:rgba(42,184,137,0.22);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+
+/* LANG */
+.lang-bar{position:fixed;top:20px;right:24px;z-index:100;display:flex;gap:2px;background:var(--bg3);border:1px solid var(--border2);border-radius:4px;padding:3px}
+.lang-btn{font-family:'IBM Plex Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:.1em;padding:5px 13px;border-radius:2px;border:none;background:transparent;color:var(--text2);cursor:pointer;transition:all .2s}
+.lang-btn.active{background:var(--gold);color:#0a0a0a}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:90;padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:56px;background:rgba(10,10,10,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-name{font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:600;color:var(--text);letter-spacing:.12em;text-transform:uppercase}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-size:11px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--gold-l)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 48px 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(201,168,76,.05) 0%,transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(42,184,137,.04) 0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:900px;margin:0 auto;width:100%}
+.hero-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;animation:fadeUp .6s ease both}
+.hero-name{font-family:'IBM Plex Sans',sans-serif;font-size:clamp(36px,5.5vw,64px);font-weight:600;line-height:1.1;letter-spacing:-.01em;color:var(--text);margin-bottom:6px;animation:fadeUp .6s .08s ease both}
+.hero-name span{color:var(--gold-l)}
+.hero-title{font-size:clamp(13px,1.8vw,16px);font-weight:400;color:var(--text2);margin-bottom:32px;letter-spacing:.04em;animation:fadeUp .6s .14s ease both}
+.hero-pos{font-size:clamp(15px,2vw,18px);font-weight:300;color:var(--text);line-height:1.65;max-width:620px;margin-bottom:44px;padding-left:18px;border-left:2px solid var(--gold);animation:fadeUp .6s .18s ease both}
+.hero-pos strong{font-weight:500;color:var(--gold-l)}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp .6s .22s ease both}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:2px;font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .2s;cursor:pointer;border:none}
+.btn-p{background:var(--gold);color:#0a0a0a}.btn-p:hover{background:var(--gold-l)}
+.btn-s{background:transparent;color:var(--text2);border:1px solid var(--border2)}.btn-s:hover{color:var(--text);border-color:rgba(255,255,255,.28)}
+.hero-stats{display:flex;gap:48px;margin-top:64px;padding-top:32px;border-top:1px solid var(--border);animation:fadeUp .6s .28s ease both;flex-wrap:wrap}
+.stat-num{font-family:'IBM Plex Serif',serif;font-size:30px;font-weight:600;color:var(--gold-l);line-height:1;margin-bottom:5px}
+.stat-label{font-size:11px;color:var(--text3);letter-spacing:.06em;text-transform:uppercase}
+
+/* SECTIONS */
+section{padding:88px 48px;max-width:960px;margin:0 auto}
+.sec-label{font-size:10px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.sec-title{font-family:'IBM Plex Serif',serif;font-size:clamp(26px,3.5vw,38px);font-weight:400;color:var(--text);margin-bottom:44px;line-height:1.25}
+.divider{width:100%;height:1px;background:var(--border);max-width:960px;margin:0 auto}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:52px;align-items:start}
+.about-text p{font-size:14px;color:var(--text2);margin-bottom:14px;line-height:1.85}
+.about-text strong{color:var(--text);font-weight:500}
+.detail-row{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--border);gap:16px}
+.detail-row:last-child{border-bottom:none}
+.dk{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);white-space:nowrap;flex-shrink:0}
+.dv{font-size:12px;color:var(--text2);text-align:right;line-height:1.4}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:0}
+.skill-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:16px 18px;transition:border-color .2s}
+.skill-card:hover{border-color:var(--border2)}
+.skill-cat{font-size:9px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.skill-list{display:flex;flex-direction:column;gap:5px}
+.skill-item{font-size:12px;color:var(--text2);line-height:1.4}
+
+/* EXPERIENCE */
+.exp-list{display:flex;flex-direction:column}
+.exp-item{display:grid;grid-template-columns:150px 1fr;gap:32px;padding:28px 0;border-bottom:1px solid var(--border);align-items:start}
+.exp-item:last-child{border-bottom:none}
+.exp-left{}
+.exp-period{font-size:11px;color:var(--text3);line-height:1.5;margin-bottom:6px}
+.exp-link{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);text-decoration:none;transition:color .2s;border:1px solid var(--border);border-radius:2px;padding:3px 8px;margin-top:4px}
+.exp-link:hover{color:var(--gold-l);border-color:var(--gold-b)}
+.exp-co{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.exp-role-badge{display:inline-flex;align-items:center;gap:6px;margin-bottom:8px}
+.exp-title{font-family:'IBM Plex Serif',serif;font-size:16px;font-weight:400;color:var(--text);line-height:1.3}
+.exp-subtitle{font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;margin-top:2px}
+.exp-desc{font-size:13px;color:var(--text2);line-height:1.75}
+.exp-desc ul{padding-left:16px;margin-top:6px}
+.exp-desc li{margin-bottom:5px}
+.exp-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.exp-tag{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:2px;border:1px solid var(--border2);color:var(--text3)}
+.exp-tag.cur{border-color:var(--teal-b);color:var(--teal-l);background:var(--teal-bg)}
+.exp-tag.gld{border-color:var(--gold-b);color:var(--gold-l);background:var(--gold-bg)}
+.exp-tag.mgmt{border-color:rgba(127,119,221,.3);color:#CECBF6;background:rgba(127,119,221,.08)}
+
+/* AWARDS */
+.awards-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.award-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start;transition:border-color .2s}
+.award-card:hover{border-color:var(--border2)}
+.award-year{font-family:'IBM Plex Serif',serif;font-size:16px;color:var(--text3);min-width:38px;line-height:1;padding-top:2px;flex-shrink:0}
+.award-title{font-size:12px;font-weight:500;color:var(--text);margin-bottom:3px;line-height:1.4}
+.award-sub{font-size:11px;color:var(--text2);line-height:1.4}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.proj-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:22px;transition:border-color .2s,transform .2s;position:relative;overflow:hidden}
+.proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.proj-card:hover{border-color:var(--border2);transform:translateY(-1px)}.proj-card:hover::before{transform:scaleX(1)}
+.proj-card.full{grid-column:1/-1}
+.proj-tag{display:inline-block;font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:2px;margin-bottom:12px}
+.proj-tag.sc{background:var(--teal-bg);color:var(--teal-l);border:1px solid var(--teal-b)}
+.proj-tag.data{background:var(--gold-bg);color:var(--gold-l);border:1px solid var(--gold-b)}
+.proj-tag.ops{background:rgba(255,255,255,.03);color:var(--text2);border:1px solid var(--border2)}
+.proj-title{font-family:'IBM Plex Serif',serif;font-size:16px;font-weight:400;color:var(--text);margin-bottom:8px;line-height:1.3}
+.proj-desc{font-size:12px;color:var(--text2);line-height:1.75;margin-bottom:14px}
+.proj-metrics{display:flex;gap:14px;flex-wrap:wrap}
+.metric{font-size:11px;color:var(--text3);display:flex;align-items:center;gap:5px}
+.metric::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+/* PUBLICATIONS */
+.pub-list{display:flex;flex-direction:column;gap:12px}
+.pub-item{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:20px 22px;display:flex;gap:18px;align-items:flex-start;transition:border-color .2s}
+.pub-item:hover{border-color:var(--border2)}
+.pub-year{font-family:'IBM Plex Serif',serif;font-size:20px;font-weight:400;color:var(--text3);min-width:48px;line-height:1;padding-top:2px}
+.pub-content{flex:1}
+.pub-title{font-size:14px;font-weight:500;color:var(--text);margin-bottom:5px;line-height:1.4}
+.pub-meta{font-size:11px;color:var(--text2);margin-bottom:10px;font-style:italic}
+.pub-tags{display:flex;gap:6px;flex-wrap:wrap}
+.pub-tag{font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:2px;border:1px solid var(--border2);color:var(--text3)}
+.pub-status{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 11px;border-radius:2px;white-space:nowrap;align-self:flex-start}
+.pub-status.wip{background:var(--gold-bg);color:var(--gold-l);border:1px solid var(--gold-b)}
+.pub-status.coming{background:rgba(255,255,255,.03);color:var(--text3);border:1px solid var(--border)}
+
+/* CERTS */
+.certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.cert-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:18px;transition:border-color .2s}
+.cert-card:hover{border-color:var(--border2)}
+.cert-card.active{border-color:var(--gold-b);background:var(--gold-bg)}
+.cert-icon{width:32px;height:32px;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;font-size:14px}
+.cert-icon.gold{background:var(--gold-bg);border:1px solid var(--gold-b)}
+.cert-icon.teal{background:var(--teal-bg);border:1px solid var(--teal-b)}
+.cert-icon.gray{background:rgba(255,255,255,.04);border:1px solid var(--border)}
+.cert-name{font-size:12px;font-weight:500;color:var(--text);margin-bottom:3px;line-height:1.3}
+.cert-org{font-size:11px;color:var(--text2);margin-bottom:10px}
+.cert-note{font-size:11px;color:var(--gold);font-weight:500;margin-bottom:8px}
+.cert-badge{display:inline-block;font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:2px}
+.cert-badge.obt{background:rgba(42,184,137,.1);color:var(--teal-l);border:1px solid var(--teal-b)}
+.cert-badge.prog{background:var(--gold-bg);color:var(--gold-l);border:1px solid var(--gold-b)}
+.cert-badge.plan{background:rgba(255,255,255,.03);color:var(--text3);border:1px solid var(--border)}
+
+/* BLOG */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.blog-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:20px;transition:border-color .2s,transform .2s}
+.blog-card:hover{border-color:var(--border2);transform:translateY(-1px)}
+.blog-date{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px}
+.blog-title{font-family:'IBM Plex Serif',serif;font-size:15px;font-weight:400;color:var(--text);margin-bottom:10px;line-height:1.4}
+.blog-excerpt{font-size:12px;color:var(--text2);line-height:1.65;margin-bottom:14px}
+.blog-more{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+
+/* CONTACT */
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact-text{font-size:14px;color:var(--text2);line-height:1.8;margin-bottom:28px}
+.contact-links{display:flex;flex-direction:column;gap:10px}
+.contact-link{display:flex;align-items:center;gap:12px;padding:13px 16px;background:var(--surface);border:1px solid var(--border);border-radius:4px;text-decoration:none;color:var(--text2);font-size:12px;transition:all .2s}
+.contact-link:hover{border-color:var(--border2);color:var(--text);background:var(--surface2)}
+.contact-icon{width:30px;height:30px;border-radius:4px;background:var(--gold-bg);border:1px solid var(--gold-b);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--gold-l);flex-shrink:0}
+.form-group{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.form-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text3)}
+.form-input,.form-textarea{background:var(--surface);border:1px solid var(--border);border-radius:2px;padding:10px 13px;font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:300;color:var(--text);transition:border-color .2s;outline:none;resize:none}
+.form-input:focus,.form-textarea:focus{border-color:var(--gold-b)}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--text3)}
+
+/* FOOTER */
+footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--text3);max-width:960px;margin:0 auto;letter-spacing:.04em}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* LANG SWITCH */
+[data-en]{display:none}
+body.en [data-fr]{display:none}
+body.en [data-en]{display:revert}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  section{padding:56px 20px}
+  .hero{padding:90px 20px 60px}
+  .about-grid,.projects-grid,.certs-grid,.blog-grid,.contact-inner,.skills-grid,.awards-grid{grid-template-columns:1fr}
+  .exp-item{grid-template-columns:1fr;gap:8px}
+  .hero-stats{gap:24px}
+  footer{padding:20px;flex-direction:column;gap:6px;text-align:center}
+}
+</style>
 </head>
-
 <body>
-  <table cellspacing="20">
-    <tr>
-      <td><img src="essodeke.jpg" alt="Essodeke profile picture"></td>
-      <td><h1>Essodeke Panizi</h1>
-      <p> <em> <strong>Supply Chain Professional</strong> Consultant and Trainer</em> </p>
-      <p>I am a Consultant and Trainer in the Supply Chain field. My main areas of skillset are supply chain network design, supply chain information systems' implementation, supply chain project managemnt, inventory managemnt and production planning.
-        I'm a member of the <strong> <a href="https://ascm.org">Association of Supply Chain Managment (ASCM)</a></strong>, the wordwide supply chain professionals association. </p></td>
 
-    </tr>
-  </table>
-  <hr>
-  <h3>My Vision</h3>
-  <p>Being a reference model in the <em>supply chain and logistics industry</em> accross Africa.</p>
-  <hr>
-  <h3>Core Skills</h3>
-<table>
-  <thead>
-    <tr>
-      <th>Languages</th>
-      <th>Information Technologies and Systems</th>
-      <th>Business Management</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>
-      <table>
-        <tr>
-          <td> <img src="" alt="">French </td>
-          <td>⭐⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-          <td> <img src="" alt="">English <em><a href="https://yourenglishtest.com/article/index/art/54">TOEIC B2 Level</a></em></td>
-          <td>⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-          <td> <img src="" alt="">Kabye</td>
-          <td>⭐⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-          <td> <img src="" alt="">Ewe</td>
-          <td>⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-          <td> <img src="" alt="">Russian</td>
-          <td>⭐⭐</td>
-        </tr>
-        <tr>
-          <td> <img src="" alt="">Wolof</td>
-          <td>⭐⭐</td>
-        </tr>
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+  <button class="lang-btn" onclick="setLang('en')">EN</button>
+</div>
 
-      </table>
-    </td>
-    <td>
+<nav>
+  <div class="nav-name">Essodéké PANIZI</div>
+  <ul class="nav-links">
+    <li><a href="#about" data-fr>À propos</a><a href="#about" data-en>About</a></li>
+    <li><a href="#experience" data-fr>Expérience</a><a href="#experience" data-en>Experience</a></li>
+    <li><a href="#projects" data-fr>Projets</a><a href="#projects" data-en>Projects</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-label" data-fr>Data Team Lead · Comité de Direction · Dakar, Sénégal</div>
+    <div class="hero-label" data-en>Data Team Lead · Management Committee · Dakar, Senegal</div>
+
+    <h1 class="hero-name">Essodéké <span>PANIZI</span></h1>
+
+    <div class="hero-title" data-fr>Supply Chain Ops &amp; Data · MAAD Distribution · MIT Alumni</div>
+    <div class="hero-title" data-en>Supply Chain Ops &amp; Data · MAAD Distribution · MIT Alumni</div>
+
+    <p class="hero-pos" data-fr>
+      Je <strong>digitalise et optimise</strong> les réseaux de distribution B2B en Afrique par la Data et l'IA.
+    </p>
+    <p class="hero-pos" data-en>
+      I <strong>digitalize and optimize</strong> B2B distribution networks in Africa through Data and AI.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#experience" class="btn btn-p" data-fr>Voir mon parcours</a>
+      <a href="#experience" class="btn btn-p" data-en>View my background</a>
+      <a href="#contact" class="btn btn-s" data-fr>Me contacter</a>
+      <a href="#contact" class="btn btn-s" data-en>Get in touch</a>
+    </div>
+
+    <div class="hero-stats">
+      <div><div class="stat-num">18500+</div><div class="stat-label" data-fr>Points de vente</div><div class="stat-label" data-en>Retail outlets</div></div>
+      <div><div class="stat-num">7+</div><div class="stat-label" data-fr>Ans d'expérience</div><div class="stat-label" data-en>Years experience</div></div>
+      <div><div class="stat-num">93/100</div><div class="stat-label">MIT MicroMasters</div></div>
+      <div><div class="stat-num">800+</div><div class="stat-label" data-fr>Références gérées</div><div class="stat-label" data-en>SKUs managed</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about" class="reveal">
+  <div class="sec-label" data-fr>À propos</div>
+  <div class="sec-label" data-en>About</div>
+  <h2 class="sec-title" data-fr>Là où la data rencontre<br>les opérations terrain</h2>
+  <h2 class="sec-title" data-en>Where data meets<br>field operations</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p data-fr>
+        <strong>Data Team Lead, membre du Comité de Direction et Analyste Supply Chain</strong> chez MAAD Distribution, je pilote depuis près de 4 ans la transformation digitale de la distribution B2B au Sénégal — de la commande fournisseur jusqu'à l'analyse de performance terrain sur 18500+ boutiques.
+      </p>
+      <p data-en>
+        <strong>Data Team Lead, Management Committee Member and Supply Chain Analyst</strong> at MAAD Distribution, I have been driving the digital transformation of B2B distribution in Senegal for nearly 4 years — from supplier orders to field performance analysis across 18500+ stores.
+      </p>
+      <p data-fr>
+        Au sein du comité de direction, je travaille en coordination avec le Directeur des Opérations et Finances sur la mise en place des processus clés (achats, réception, gestion des retours, réclamations, produits endommagés) et j'apporte mon expertise sur l'optimisation des entrepôts, livraisons et flotte.
+      </p>
+      <p data-en>
+        As part of the management committee, I work in coordination with the Operations and Finance Director on key process implementation (purchasing, receiving, returns management, customer claims, damaged products) and provide expertise on warehouse, delivery, and fleet optimization.
+      </p>
+      <p data-fr>
+        Boursier de l'État Togolais au Sénégal (2016–2021), titulaire d'un <strong>Master SC Engineering (Université d'Artois, 16,2/20)</strong> et du <strong>MicroMasters MIT SCM (93/100)</strong>, je poursuis un double Master DSIA / MS2D (ESMT + 3iL) en Data Science et IA.
+      </p>
+      <p data-en>
+        A recipient of the Togolese State Scholarship in Senegal (2016–2021), holding a <strong>Master's in SC Engineering (Université d'Artois, 16.2/20)</strong> and the <strong>MIT SCM MicroMasters (93/100)</strong>, I am currently pursuing a dual Master's DSIA / MS2D (ESMT + 3iL) in Data Science and AI.
+      </p>
+    </div>
+    <div>
+      <div class="detail-row"><span class="dk" data-fr>Poste</span><span class="dk" data-en>Role</span><span class="dv" data-fr>Data Team Lead · Comité de Direction</span><span class="dv" data-en>Data Team Lead · Mgmt Committee</span></div>
+      <div class="detail-row"><span class="dk">Entreprise</span><span class="dv"><a href="https://maad.io" target="_blank" style="color:var(--gold-l);text-decoration:none;">MAAD Distribution · maad.io</a></span></div>
+      <div class="detail-row"><span class="dk" data-fr>En cours</span><span class="dk" data-en>In progress</span><span class="dv">DSIA + MS2D · fin 2027</span></div>
+      <div class="detail-row"><span class="dk" data-fr>Diplômes</span><span class="dk" data-en>Degrees</span><span class="dv">MSc Artois 16,2 · MIT 93/100</span></div>
+      <div class="detail-row"><span class="dk" data-fr>Origine</span><span class="dk" data-en>Origin</span><span class="dv" data-fr>Lomé, Togo → Dakar, Sénégal</span><span class="dv" data-en>Lomé, Togo → Dakar, Senegal</span></div>
+      <div class="detail-row"><span class="dk" data-fr>Langues</span><span class="dk" data-en>Languages</span><span class="dv" data-fr>Français (natif) · Anglais (pro)</span><span class="dv" data-en>French (native) · English (pro)</span></div>
+      <div class="detail-row"><span class="dk">Email</span><span class="dv"><a href="mailto:spanizi11@gmail.com" style="color:var(--text2);text-decoration:none;">spanizi11@gmail.com</a></span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section id="skills" class="reveal">
+  <div class="sec-label" data-fr>Compétences</div>
+  <div class="sec-label" data-en>Skills</div>
+  <h2 class="sec-title" data-fr>Stack technique<br>& expertises métier</h2>
+  <h2 class="sec-title" data-en>Technical stack<br>& business expertise</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-cat">Supply Chain</div>
+      <div class="skill-list">
+        <span class="skill-item" data-fr>Optimisation & modélisation SC</span><span class="skill-item" data-en>SC optimization & modeling</span>
+        <span class="skill-item" data-fr>Planification des besoins</span><span class="skill-item" data-en>Demand planning</span>
+        <span class="skill-item" data-fr>Achats & approvisionnement</span><span class="skill-item" data-en>Procurement</span>
+        <span class="skill-item" data-fr>Gestion des stocks</span><span class="skill-item" data-en>Inventory management</span>
+        <span class="skill-item">Modèle SCOR</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">Data & BI</div>
+      <div class="skill-list">
+        <span class="skill-item">Python</span>
+        <span class="skill-item">PostgreSQL / BigQuery</span>
+        <span class="skill-item">Power BI · Looker Studio</span>
+        <span class="skill-item">MS Excel (Power Pivot)</span>
+        <span class="skill-item">Orange Data Mining</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat" data-fr>Ops & Tech</div>
+      <div class="skill-cat" data-en>Ops & Tech</div>
+      <div class="skill-list">
+        <span class="skill-item">Odoo ERP</span>
+        <span class="skill-item">Node.js · Vue.js</span>
+        <span class="skill-item">Google Apps Script</span>
+        <span class="skill-item">HTML · CSS · WordPress</span>
+        <span class="skill-item" data-fr>G-Suite · MS Office</span><span class="skill-item" data-en>G-Suite · MS Office</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat" data-fr>Management</div>
+      <div class="skill-cat" data-en>Management</div>
+      <div class="skill-list">
+        <span class="skill-item" data-fr>Comité de direction</span><span class="skill-item" data-en>Management committee</span>
+        <span class="skill-item" data-fr>Pilotage équipe data (2 pers.)</span><span class="skill-item" data-en>Data team lead (2 people)</span>
+        <span class="skill-item" data-fr>Conception de processus ops</span><span class="skill-item" data-en>Ops process design</span>
+        <span class="skill-item" data-fr>Analyse financière</span><span class="skill-item" data-en>Financial analysis</span>
+        <span class="skill-item" data-fr>Probabilités & Statistiques</span><span class="skill-item" data-en>Probability & Statistics</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="reveal">
+  <div class="sec-label" data-fr>Expérience professionnelle</div>
+  <div class="sec-label" data-en>Professional experience</div>
+  <h2 class="sec-title" data-fr>Un parcours ancré<br>dans les opérations</h2>
+  <h2 class="sec-title" data-en>A career rooted<br>in operations</h2>
+
+  <div class="exp-list">
+
+    <!-- MAAD Data Team Lead -->
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-period" data-fr>Août 2025 — Présent · 8 mois</div>
+        <div class="exp-period" data-en>Aug 2025 — Present · 8 months</div>
+        <a href="https://maad.io" target="_blank" class="exp-link">maad.io ↗</a>
+      </div>
+      <div>
+        <div class="exp-co">MAAD Distribution</div>
+        <div class="exp-title" data-fr>Data Team Lead · Comité de Direction</div>
+        <div class="exp-title" data-en>Data Team Lead · Management Committee</div>
+        <div class="exp-tags" style="margin-bottom:10px;">
+          <span class="exp-tag cur" data-fr>Poste actuel</span>
+          <span class="exp-tag cur" data-en>Current role</span>
+          <span class="exp-tag mgmt" data-fr>Comité de Direction</span>
+          <span class="exp-tag mgmt" data-en>Management Committee</span>
+        </div>
+        <div class="exp-desc" data-fr>
           <ul>
-            <li>Productivity : Microsoft Office Suite</li>
-            <li>Productivity : Google Docs Suite</li>
-            <li>Business Integration : Salesforce</li>
-            <li>Data Modeling : Visual Paradigm</li>
-            <li>Database Management : MySQL</li>
-            <li>Business Analytics : Power BI </li>
-            <li>Business Analytics : QlikView</li>
-            <li>Machine Learning : Orange</li>
-            <li>Full Stack Web Developpment : HTML - CSS - JavaScript - Node.js - React.js - MongoDB - APIs</li>
+            <li>Pilotage de l'équipe data (2 personnes côté Tech) — orientation business, connaissance du système, autonomie guidée</li>
+            <li>Membre du comité de direction : participation aux décisions stratégiques et opérationnelles en coordination avec le Directeur Ops &amp; Finances</li>
+            <li>Conseil et avis sur l'optimisation des opérations (entrepôts, livraisons, flotte)</li>
+            <li>Intervention transversale : management stratégique et assistance opérationnelle aux équipes terrain</li>
           </ul>
-    </td>
-    <td>
-      <ul>
-        <li>Supply Chain Consulting</li>
-        <li>Supply Chain Audit - ASLOG and MMOG/LE Standards</li>
-        <li>Purchasing & Procurement</li>
-        <li>Warehouse Management</li>
-        <li>Inventory Management</li>
-        <li>Supply Chain Project Managemnt</li>
-        <li>Information Systems implementation & training - <strong><a href="https://www.odoo.com/">Odoo Specialist</a></strong> </li>
-        <li>Information Systems Integration</li>
-        <li>Business Development</li>
-        <li>Key Account Management</li>
-        <li>Digital Marketing Professional - SMM - SEO - SEM - Online Ads</li>
-        <li>E-commerce specialist</li>
-      </ul>
-    </td>
-  </tr>
+        </div>
+        <div class="exp-desc" data-en>
+          <ul>
+            <li>Data team management (2 people on the Tech side) — business orientation, system knowledge, guided autonomy</li>
+            <li>Management committee member: participation in strategic and operational decisions in coordination with the Ops &amp; Finance Director</li>
+            <li>Advisory role on operations optimization (warehouses, deliveries, fleet)</li>
+            <li>Cross-functional involvement: strategic management and operational support for field teams</li>
+          </ul>
+        </div>
+        <div class="exp-tags">
+          <span class="exp-tag">Data Leadership</span>
+          <span class="exp-tag">PostgreSQL · Python</span>
+          <span class="exp-tag">Node.js · Vue.js</span>
+          <span class="exp-tag gld">B2B Distribution</span>
+        </div>
+      </div>
+    </div>
 
-  </tbody>
-  <tfoot>
+    <!-- MAAD Analyste SC -->
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-period" data-fr>Sept. 2024 — Présent · 1 an 7 mois</div>
+        <div class="exp-period" data-en>Sep 2024 — Present · 1 yr 7 mo</div>
+        <a href="https://maad.io" target="_blank" class="exp-link">maad.io ↗</a>
+      </div>
+      <div>
+        <div class="exp-co">MAAD Distribution</div>
+        <div class="exp-title" data-fr>Analyste Supply Chain</div>
+        <div class="exp-title" data-en>Supply Chain Analyst</div>
+        <div class="exp-desc" data-fr>
+          <ul>
+            <li>Mise en place des processus opérationnels : commande fournisseur → réception → rangement stock, collecte de retours en livraison, réclamations clients, produits endommagés, cycle count</li>
+            <li>Mise en place des KPI dans chaque département (Achats, Entrepôt, Service Clients)</li>
+            <li>Extraction, analyse et visualisation de données sur les indicateurs clés de performance</li>
+            <li>Suivi des achats via fichiers de suivi dédiés</li>
+          </ul>
+        </div>
+        <div class="exp-desc" data-en>
+          <ul>
+            <li>Operational process design: supplier order → receiving → stock put-away, delivery returns collection, customer claims, damaged products, cycle count</li>
+            <li>KPI setup across all departments (Purchasing, Warehouse, Customer Service)</li>
+            <li>Data extraction, analysis, and visualization on key performance indicators</li>
+            <li>Purchase tracking via dedicated tracking files</li>
+          </ul>
+        </div>
+        <div class="exp-tags">
+          <span class="exp-tag gld">SC Analytics</span>
+          <span class="exp-tag">SQL · Python</span>
+          <span class="exp-tag">BI Dashboards</span>
+          <span class="exp-tag">Process Design</span>
+        </div>
+      </div>
+    </div>
 
-  </tfoot>
-</table>
-  <hr>
-  <h3>Work Experience</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Date </th>
-        <th>Work</th>
-        <th>Company</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Oct. 2021 -Now</td>
-        <td>Head of E-Commerce Sales</td>
-        <td><a href="https://cacsenegal.com">CAC Senegal</a></td>
-      </tr>
-      <tr>
-        <td>Feb. 2019 - Aug. 2021 </td>
-        <td>Sales - Key Account Manager</td>
-        <td><a href="https://jumia.sn">Jumia Senegal</a></td>
-      </tr>
-    </tbody>
+    <!-- MAAD Acheteur Senior -->
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-period" data-fr>Août 2023 — Sept. 2024 · 1 an 2 mois</div>
+        <div class="exp-period" data-en>Aug 2023 — Sep 2024 · 1 yr 2 mo</div>
+        <a href="https://maad.io" target="_blank" class="exp-link">maad.io ↗</a>
+      </div>
+      <div>
+        <div class="exp-co">MAAD Distribution</div>
+        <div class="exp-title" data-fr>Acheteur Sénior — FMCG</div>
+        <div class="exp-title" data-en>Senior Buyer — FMCG</div>
+        <div class="exp-desc" data-fr>
+          <ul>
+            <li>Supervision d'une équipe de 3 acheteurs juniors : formation, coaching, suivi de performance globale</li>
+            <li>Maintien d'un taux de disponibilité de 70% sur un catalogue de ~800 références produits</li>
+            <li>Gestion relation fournisseurs : sélection, évaluation, catalogue, réconciliation des comptes</li>
+            <li>Optimisation du Besoin en Fonds de Roulement (BFR), négociation des crédits fournisseurs</li>
+          </ul>
+        </div>
+        <div class="exp-desc" data-en>
+          <ul>
+            <li>Supervision of 3 junior buyers: training, coaching, overall performance monitoring</li>
+            <li>Maintained 70% availability rate on a ~800 SKU product catalog</li>
+            <li>Supplier relationship management: selection, evaluation, catalog, account reconciliation</li>
+            <li>Working capital (BFR) optimization, supplier credit negotiation</li>
+          </ul>
+        </div>
+        <div class="exp-tags">
+          <span class="exp-tag" data-fr>Encadrement équipe</span><span class="exp-tag" data-en>Team management</span>
+          <span class="exp-tag">800 SKUs</span>
+          <span class="exp-tag">BFR · Négociation</span>
+        </div>
+      </div>
+    </div>
 
-    <tfoot>
+    <!-- MAAD Acheteur -->
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-period" data-fr>Mai 2022 — Août 2023 · 1 an 4 mois</div>
+        <div class="exp-period" data-en>May 2022 — Aug 2023 · 1 yr 4 mo</div>
+        <a href="https://maad.io" target="_blank" class="exp-link">maad.io ↗</a>
+      </div>
+      <div>
+        <div class="exp-co">MAAD Distribution</div>
+        <div class="exp-title" data-fr>Acheteur — FMCG</div>
+        <div class="exp-title" data-en>Buyer — FMCG</div>
+        <div class="exp-desc" data-fr>Approvisionnement, coordination logistique, organisation du transport amont (achats EXW), transferts internes, vérification des réceptions, gestion des produits endommagés et retours fournisseurs, suivi des paiements.</div>
+        <div class="exp-desc" data-en>Procurement, logistics coordination, upstream transport organization (EXW purchases), internal transfers, receipt verification, damaged products and supplier returns management, payment tracking.</div>
+        <div class="exp-tags">
+          <span class="exp-tag" data-fr>Approvisionnement</span><span class="exp-tag" data-en>Procurement</span>
+          <span class="exp-tag">Transport EXW</span>
+          <span class="exp-tag" data-fr>Gestion stocks</span><span class="exp-tag" data-en>Stock management</span>
+        </div>
+      </div>
+    </div>
 
-    </tfoot>
+    <!-- CAC -->
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-period" data-fr>Oct. 2021 — Mai 2022 · 8 mois</div>
+        <div class="exp-period" data-en>Oct 2021 — May 2022 · 8 months</div>
+      </div>
+      <div>
+        <div class="exp-co">Compagnie Africaine de Commerce — CAC Sénégal</div>
+        <div class="exp-title" data-fr>Responsable Administratif &amp; E-Commerce</div>
+        <div class="exp-title" data-en>Administrative &amp; E-Commerce Manager</div>
+        <div class="exp-desc" data-fr>
+          <ul>
+            <li>Administration du site cacsenegal.com et gestion du partenariat Jumia Sénégal</li>
+            <li>Traitement des commandes online, monitoring de performance hebdomadaire</li>
+            <li>Inventaires cycliques et périodiques, détection de cas de fraudes, gestion des stocks et retours</li>
+            <li>Préparation de dossiers de soumission aux appels d'offres</li>
+          </ul>
+        </div>
+        <div class="exp-desc" data-en>
+          <ul>
+            <li>Management of cacsenegal.com and Jumia Senegal partnership</li>
+            <li>Online order processing, weekly performance monitoring</li>
+            <li>Cyclic and periodic inventory counts, fraud detection, stock and returns management</li>
+            <li>Tender submission file preparation</li>
+          </ul>
+        </div>
+        <div class="exp-tags">
+          <span class="exp-tag">E-Commerce</span>
+          <span class="exp-tag">Jumia</span>
+          <span class="exp-tag" data-fr>Appels d'offres</span><span class="exp-tag" data-en>Tenders</span>
+        </div>
+      </div>
+    </div>
 
-  </table>
-  <hr>
-  <a href="hobbies.html">My Hobbies</a>
-  <a href="contact-me.html">Contact me</a>
+    <!-- Jumia -->
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-period" data-fr>Fév. 2019 — Août 2021 · 2 ans 7 mois</div>
+        <div class="exp-period" data-en>Feb 2019 — Aug 2021 · 2 yrs 7 mo</div>
+        <a href="https://www.jumia.sn" target="_blank" class="exp-link">jumia.sn ↗</a>
+      </div>
+      <div>
+        <div class="exp-co">Jade E-Services Senegal — Jumia Group</div>
+        <div class="exp-title" data-fr>Commercial · Key Account Manager</div>
+        <div class="exp-title" data-en>Commercial · Key Account Manager</div>
+        <div class="exp-desc" data-fr>
+          <ul>
+            <li>Gestion d'un portefeuille de 15 vendeurs (Électroménager) sur la marketplace leader africaine de l'e-commerce</li>
+            <li>Analyse des KPIs : taux de conversion, CA, pageviews, items sold — rapports hebdomadaires et mensuels</li>
+            <li>Élaboration et suivi des Joint Business Plans annuels pour les comptes stratégiques</li>
+            <li>Réapprovisionnement, gestion des stocks en consignation, gestion des retours produits</li>
+            <li><strong>Employé du Mois (2020)</strong></li>
+          </ul>
+        </div>
+        <div class="exp-desc" data-en>
+          <ul>
+            <li>Management of a 15-vendor portfolio (Home Appliances) on Africa's leading e-commerce marketplace</li>
+            <li>KPI analysis: conversion rate, revenue, pageviews, items sold — weekly and monthly reports</li>
+            <li>Annual Joint Business Plan development and monitoring for strategic accounts</li>
+            <li>Replenishment, consignment stock management, product returns management</li>
+            <li><strong>Employee of the Month (2020)</strong></li>
+          </ul>
+        </div>
+        <div class="exp-tags">
+          <span class="exp-tag">Key Account</span>
+          <span class="exp-tag">E-Commerce</span>
+          <span class="exp-tag">KPI Analysis</span>
+          <span class="exp-tag gld" data-fr>Employé du Mois 2020</span><span class="exp-tag gld" data-en>Employee of Month 2020</span>
+        </div>
+      </div>
+    </div>
 
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects" class="reveal">
+  <div class="sec-label" data-fr>Projets & réalisations</div>
+  <div class="sec-label" data-en>Projects & achievements</div>
+  <h2 class="sec-title" data-fr>Terrain, data,<br>impact mesurable</h2>
+  <h2 class="sec-title" data-en>Field work, data,<br>measurable impact</h2>
+  <div class="projects-grid">
+
+    <div class="proj-card full">
+      <div class="proj-tag sc">Supply Chain · Distribution B2B</div>
+      <h3 class="proj-title" data-fr>Digitalisation de la distribution B2B — MAAD Distribution</h3>
+      <h3 class="proj-title" data-en>B2B Distribution Digitalization — MAAD Distribution</h3>
+      <p class="proj-desc" data-fr>Déploiement et pilotage de la plateforme de distribution digitale pour 28500+ boutiquiers au Sénégal. Conception des workflows opérationnels end-to-end (achat fournisseur → réception → rangement → livraison → retours), dashboards KPI multi-campagnes, cartographie GPS de ~130 marchés sénégalais, automatisation des rapports quotidiens.</p>
+      <p class="proj-desc" data-en>Deployment and management of the digital distribution platform for 28500+ neighborhood stores in Senegal. End-to-end operational workflow design (supplier order → receiving → put-away → delivery → returns), multi-campaign KPI dashboards, GPS mapping of ~130 Senegalese markets, daily report automation.</p>
+      <div class="proj-metrics">
+        <span class="metric" data-fr>28500+ points de vente</span><span class="metric" data-en>28500+ retail outlets</span>
+        <span class="metric">20 000+ livraisons/mois</span>
+        <span class="metric">PostgreSQL · Node.js · Vue.js</span>
+        <span class="metric" data-fr>3 entrepôts gérés</span><span class="metric" data-en>3 warehouses managed</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-tag data">Data · BI</div>
+      <h3 class="proj-title" data-fr>Dashboards de performance SC</h3>
+      <h3 class="proj-title" data-en>SC Performance Dashboards</h3>
+      <p class="proj-desc" data-fr>Tableaux de bord multi-campagnes : suivi KPIs, analyse modifications soumissions, rapports automatisés via Google Apps Script + Heroku Dataclips. Email quotidien 8h30 Dakar.</p>
+      <p class="proj-desc" data-en>Multi-campaign dashboards: KPI tracking, submission modification analysis, automated daily reports via Google Apps Script + Heroku Dataclips.</p>
+      <div class="proj-metrics">
+        <span class="metric">GAS · Heroku · SQL</span>
+        <span class="metric" data-fr>Automatisation quotidienne</span><span class="metric" data-en>Daily automation</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-tag ops">Ops · Inventaire</div>
+      <h3 class="proj-title" data-fr>Système de gestion des retours stocks</h3>
+      <h3 class="proj-title" data-en>Stock Returns Management System</h3>
+      <p class="proj-desc" data-fr>Workflow Entrepôt Collecte Retours : flux vers Pikine Hangar et STOCK QUARANTINE, validations multi-étapes, API mobile agents terrain.</p>
+      <p class="proj-desc" data-en>Returns Warehouse workflow: flows to Pikine Hangar and STOCK QUARANTINE, multi-step validations, field agent mobile API.</p>
+      <div class="proj-metrics">
+        <span class="metric" data-fr>3 entrepôts · 2 campagnes</span><span class="metric" data-en>3 warehouses · 2 campaigns</span>
+        <span class="metric">REST API · PostgreSQL</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-tag sc">SC · Cartographie</div>
+      <h3 class="proj-title" data-fr>Carte interactive grossistes Sénégal</h3>
+      <h3 class="proj-title" data-en>Interactive Wholesaler Map — Senegal</h3>
+      <p class="proj-desc" data-fr>Interface cartographique avec filtres géographiques cascadants et métriques de performance. ~130 marchés géocodés avec données GPS terrain.</p>
+      <p class="proj-desc" data-en>Mapping interface with cascading geographic filters and performance metrics. ~130 markets geocoded with field GPS data.</p>
+      <div class="proj-metrics">
+        <span class="metric">Leaflet.js · PostgreSQL</span>
+        <span class="metric" data-fr>~130 marchés</span><span class="metric" data-en>~130 markets</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-tag sc">SC · Académique</div>
+      <h3 class="proj-title" data-fr>Conception réseau logistique — Modèle SCOR</h3>
+      <h3 class="proj-title" data-en>Logistics Network Design — SCOR Model</h3>
+      <p class="proj-desc" data-fr>Projet académique (Université d'Artois × CTD) : conception d'un réseau logistique basé sur le modèle SCOR. Chef de groupe.</p>
+      <p class="proj-desc" data-en>Academic project (Université d'Artois × CTD): logistics network design based on the SCOR model. Group leader.</p>
+      <div class="proj-metrics">
+        <span class="metric">SCOR Framework</span>
+        <span class="metric" data-fr>Univ. d'Artois · CTD</span><span class="metric" data-en>Univ. Artois · CTD</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PUBLICATIONS -->
+<section id="publications" class="reveal">
+  <div class="sec-label">Publications</div>
+  <h2 class="sec-title" data-fr>Recherche &amp;<br>réflexions académiques</h2>
+  <h2 class="sec-title" data-en>Research &amp;<br>academic work</h2>
+  <div class="pub-list">
+    <div class="pub-item">
+      <div class="pub-year">2026</div>
+      <div class="pub-content">
+        <div class="pub-title" data-fr>Digitalisation de la distribution B2B en Afrique de l'Ouest : enseignements d'un terrain au Sénégal</div>
+        <div class="pub-title" data-en>B2B Distribution Digitalization in West Africa: Lessons from a Field Study in Senegal</div>
+        <div class="pub-meta" data-fr>Working paper en cours · Données MAAD Distribution · Base thèse EDBA</div>
+        <div class="pub-meta" data-en>Working paper in progress · MAAD Distribution data · EDBA thesis foundation</div>
+        <div class="pub-tags"><span class="pub-tag">Supply Chain</span><span class="pub-tag">Digitalisation</span><span class="pub-tag">B2B</span><span class="pub-tag" data-fr>Afrique de l'Ouest</span><span class="pub-tag" data-en>West Africa</span></div>
+      </div>
+      <span class="pub-status wip" data-fr>En cours</span><span class="pub-status wip" data-en>In progress</span>
+    </div>
+    <div class="pub-item">
+      <div class="pub-year">2029</div>
+      <div class="pub-content">
+        <div class="pub-title" data-fr>Thèse EDBA — Transformation data-driven des chaînes logistiques en Afrique subsaharienne</div>
+        <div class="pub-title" data-en>EDBA Thesis — Data-driven transformation of supply chains in sub-Saharan Africa</div>
+        <div class="pub-meta" data-fr>Projet de thèse · EDBA Dauphine-PSL Dakar · 2029–2032</div>
+        <div class="pub-meta" data-en>Thesis project · EDBA Dauphine-PSL Dakar · 2029–2032</div>
+        <div class="pub-tags"><span class="pub-tag">EDBA</span><span class="pub-tag">Dauphine-PSL</span><span class="pub-tag" data-fr>Recherche appliquée</span><span class="pub-tag" data-en>Applied research</span></div>
+      </div>
+      <span class="pub-status coming" data-fr>Prévu</span><span class="pub-status coming" data-en>Planned</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="reveal">
+  <div class="sec-label">Certifications &amp; Formations</div>
+  <h2 class="sec-title" data-fr>Parcours académique<br>&amp; credentials</h2>
+  <h2 class="sec-title" data-en>Academic background<br>&amp; credentials</h2>
+  <div class="certs-grid">
+    <div class="cert-card active">
+      <div class="cert-icon gold">◈</div>
+      <div class="cert-name">MicroMasters SCM</div>
+      <div class="cert-org">MIT · edX · 2021–2023</div>
+      <div class="cert-note">93 / 100</div>
+      <span class="cert-badge obt" data-fr>Obtenu</span><span class="cert-badge obt" data-en>Obtained</span>
+    </div>
+    <div class="cert-card active">
+      <div class="cert-icon gold">◈</div>
+      <div class="cert-name" data-fr>Master Ingénierie SC</div><div class="cert-name" data-en>Master's SC Engineering</div>
+      <div class="cert-org" data-fr>Université d'Artois · 2019–2021</div><div class="cert-org" data-en>Université d'Artois · 2019–2021</div>
+      <div class="cert-note">16,2 / 20</div>
+      <span class="cert-badge obt" data-fr>Obtenu</span><span class="cert-badge obt" data-en>Obtained</span>
+    </div>
+    <div class="cert-card active">
+      <div class="cert-icon gold">◈</div>
+      <div class="cert-name" data-fr>Licence Commerce &amp; Dev. International</div><div class="cert-name" data-en>Bachelor's Commerce &amp; Int. Dev.</div>
+      <div class="cert-org">CNAM × Trainmar · 2019</div>
+      <div class="cert-note">15,6 / 20</div>
+      <span class="cert-badge obt" data-fr>Obtenu</span><span class="cert-badge obt" data-en>Obtained</span>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon teal">◎</div>
+      <div class="cert-name">Master DSIA + MS2D</div>
+      <div class="cert-org">ESMT + 3iL · 2026–2027</div>
+      <span class="cert-badge prog" data-fr>En cours</span><span class="cert-badge prog" data-en>In progress</span>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon gold">◈</div>
+      <div class="cert-name">CSCP (APICS)</div>
+      <div class="cert-org">ASCM</div>
+      <span class="cert-badge plan" data-fr>Prévu S1 2028</span><span class="cert-badge plan" data-en>Planned H1 2028</span>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon gold">◈</div>
+      <div class="cert-name">CTSC (APICS)</div>
+      <div class="cert-org">ASCM</div>
+      <span class="cert-badge plan" data-fr>Prévu 2028–2029</span><span class="cert-badge plan" data-en>Planned 2028–2029</span>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon teal">◎</div>
+      <div class="cert-name">EDBA</div>
+      <div class="cert-org">Dauphine-PSL · Dakar</div>
+      <span class="cert-badge plan" data-fr>Prévu 2029–2032</span><span class="cert-badge plan" data-en>Planned 2029–2032</span>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon gray">◇</div>
+      <div class="cert-name" data-fr>Logistique UNICEF</div><div class="cert-name" data-en>UNICEF Logistics</div>
+      <div class="cert-org">UNICEF</div>
+      <span class="cert-badge obt" data-fr>Obtenu</span><span class="cert-badge obt" data-en>Obtained</span>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon gray">◇</div>
+      <div class="cert-name" data-fr>Certificat SC Design</div><div class="cert-name" data-en>SC Design Certificate</div>
+      <div class="cert-org" data-fr>Vérifié · 2016</div><div class="cert-org" data-en>Verified · 2016</div>
+      <span class="cert-badge obt" data-fr>Obtenu</span><span class="cert-badge obt" data-en>Obtained</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- AWARDS -->
+<section id="awards" class="reveal">
+  <div class="sec-label" data-fr>Distinctions &amp; Leadership</div>
+  <div class="sec-label" data-en>Awards &amp; Leadership</div>
+  <h2 class="sec-title" data-fr>Reconnaissances<br>&amp; engagements</h2>
+  <h2 class="sec-title" data-en>Recognition<br>&amp; commitments</h2>
+  <div class="awards-grid">
+    <div class="award-card">
+      <div class="award-year">2020</div>
+      <div>
+        <div class="award-title" data-fr>Employé du Mois</div><div class="award-title" data-en>Employee of the Month</div>
+        <div class="award-sub" data-fr>Jumia Sénégal — Reconnaissance de la performance commerciale</div><div class="award-sub" data-en>Jumia Senegal — Commercial performance recognition</div>
+      </div>
+    </div>
+    <div class="award-card">
+      <div class="award-year">2016–21</div>
+      <div>
+        <div class="award-title" data-fr>Boursier de l'État Togolais</div><div class="award-title" data-en>Togolese State Scholar</div>
+        <div class="award-sub" data-fr>Bourse d'études au Sénégal · 5 ans</div><div class="award-sub" data-en>Scholarship to study in Senegal · 5 years</div>
+      </div>
+    </div>
+    <div class="award-card">
+      <div class="award-year">2018</div>
+      <div>
+        <div class="award-title" data-fr>Fondateur Club d'Anglais</div><div class="award-title" data-en>English Club Founder</div>
+        <div class="award-sub" data-fr>Dakar Air Academy · 15 membres</div><div class="award-sub" data-en>Dakar Air Academy · 15 members</div>
+      </div>
+    </div>
+    <div class="award-card">
+      <div class="award-year">2016</div>
+      <div>
+        <div class="award-title" data-fr>Gagnant Black History Month Quiz</div><div class="award-title" data-en>Black History Month Quiz Winner</div>
+        <div class="award-sub" data-fr>Ambassade des États-Unis · TETO · Chef d'équipe (3 membres)</div><div class="award-sub" data-en>US Embassy · TETO · Team leader (3 members)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BLOG -->
+<section id="blog" class="reveal">
+  <div class="sec-label">Blog</div>
+  <h2 class="sec-title" data-fr>Réflexions supply chain<br>&amp; Afrique de l'Ouest</h2>
+  <h2 class="sec-title" data-en>Supply chain thoughts<br>&amp; West Africa</h2>
+  <div class="blog-grid">
+    <div class="blog-card">
+      <div class="blog-date" data-fr>À venir · 2026</div><div class="blog-date" data-en>Coming · 2026</div>
+      <h3 class="blog-title" data-fr>Pourquoi la distribution informelle en Afrique est un laboratoire d'innovation SC</h3>
+      <h3 class="blog-title" data-en>Why informal distribution in Africa is a SC innovation lab</h3>
+      <p class="blog-excerpt" data-fr>Les contraintes du marché informel forcent des solutions SC que les marchés formels n'ont jamais eu à concevoir.</p>
+      <p class="blog-excerpt" data-en>The constraints of informal markets force SC solutions that formal markets have never had to design.</p>
+      <span class="blog-more" data-fr>Bientôt →</span><span class="blog-more" data-en>Coming soon →</span>
+    </div>
+    <div class="blog-card">
+      <div class="blog-date" data-fr>À venir · 2026</div><div class="blog-date" data-en>Coming · 2026</div>
+      <h3 class="blog-title" data-fr>De Jumia à MAAD : ce que l'e-commerce m'a appris sur la logistique réelle</h3>
+      <h3 class="blog-title" data-en>From Jumia to MAAD: what e-commerce taught me about real logistics</h3>
+      <p class="blog-excerpt" data-fr>Gérer 15 vendeurs chez Jumia puis piloter la distribution B2B physique — convergences et fractures entre les deux mondes.</p>
+      <p class="blog-excerpt" data-en>Managing 15 vendors at Jumia then leading physical B2B distribution — convergences and fractures between both worlds.</p>
+      <span class="blog-more" data-fr>Bientôt →</span><span class="blog-more" data-en>Coming soon →</span>
+    </div>
+    <div class="blog-card">
+      <div class="blog-date" data-fr>À venir · 2026</div><div class="blog-date" data-en>Coming · 2026</div>
+      <h3 class="blog-title" data-fr>CSCP vs CTSC : quel parcours APICS pour un profil SC Afrique ?</h3>
+      <h3 class="blog-title" data-en>CSCP vs CTSC: which APICS path for a West Africa SC profile?</h3>
+      <p class="blog-excerpt" data-fr>Ma stratégie de certification pour viser les ONG internationales et les multinationales depuis Dakar.</p>
+      <p class="blog-excerpt" data-en>My certification strategy for targeting international NGOs and multinationals from Dakar.</p>
+      <span class="blog-more" data-fr>Bientôt →</span><span class="blog-more" data-en>Coming soon →</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+  <div class="sec-label">Contact</div>
+  <h2 class="sec-title" data-fr>Travaillons ensemble</h2>
+  <h2 class="sec-title" data-en>Let's work together</h2>
+  <div class="contact-inner">
+    <div>
+      <p class="contact-text" data-fr>Disponible pour des échanges sur la transformation supply chain en Afrique, des opportunités dans les entreprises de distribution,industrielles, ONG et organisations internationales, ou pour discuter de SC data-driven.</p>
+      <p class="contact-text" data-en>Available for discussions on supply chain transformation in Africa, opportunities in  distribution or manufacturing companies, NGOs and international organizations, or to talk about data-driven SC.</p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/essodekepanizi/" target="_blank" class="contact-link">
+          <div class="contact-icon">in</div>
+          <div><div style="font-size:13px;color:var(--text);font-weight:500;">LinkedIn</div><div style="font-size:11px;color:var(--text3);">linkedin.com/in/essodekepanizi</div></div>
+        </a>
+        <a href="mailto:spanizi11@gmail.com" class="contact-link">
+          <div class="contact-icon">@</div>
+          <div><div style="font-size:13px;color:var(--text);font-weight:500;">Email</div><div style="font-size:11px;color:var(--text3);">spanizi11@gmail.com</div></div>
+        </a>
+        <a href="https://maad.io" target="_blank" class="contact-link">
+          <div class="contact-icon" style="font-size:10px;letter-spacing:.05em;">M</div>
+          <div><div style="font-size:13px;color:var(--text);font-weight:500;">MAAD Distribution</div><div style="font-size:11px;color:var(--text3);">maad.io</div></div>
+        </a>
+      </div>
+    </div>
+    <form onsubmit="return false;">
+      <div class="form-group"><label class="form-label" data-fr>Nom</label><label class="form-label" data-en>Name</label><input type="text" class="form-input" placeholder="Votre nom / Your name"></div>
+      <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="votre@email.com"></div>
+      <div class="form-group"><label class="form-label" data-fr>Message</label><label class="form-label" data-en>Message</label><textarea class="form-textarea" rows="4" placeholder="Votre message / Your message"></textarea></div>
+      <button type="submit" class="btn btn-p" style="margin-top:4px;" data-fr>Envoyer</button>
+      <button type="submit" class="btn btn-p" style="margin-top:4px;" data-en>Send</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Essodéké PANIZI · Dakar, Sénégal · Togo</span>
+  <span>Supply Chain Ops &amp; Data · <a href="https://maad.io" target="_blank" style="color:var(--text3);text-decoration:none;">maad.io</a></span>
+</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('en',lang==='en');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent===lang.toUpperCase()));
+}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
+},{threshold:0.07});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
 </html>

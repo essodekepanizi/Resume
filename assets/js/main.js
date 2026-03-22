@@ -269,9 +269,10 @@ function renderFormation(formation) {
 
   el.innerHTML = sorted.map(f => {
     const logoHTML = f.logo
-      ? `<img src="${f.logo}" alt="${f.ecole_court}" class="edu-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-         <div class="edu-initiales" style="display:none">${f.initiales || f.ecole_court.charAt(0)}</div>`
-      : `<div class="edu-initiales">${f.initiales || f.ecole_court.charAt(0)}</div>`;
+  ? `<img src="${f.logo}" alt="${f.ecole_court}" class="edu-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+     ${f.logo2 ? `<img src="${f.logo2}" alt="" class="edu-logo edu-logo-2" onerror="this.style.display='none'">` : ''}
+     <div class="edu-initiales" style="display:none">${f.initiales || f.ecole_court.charAt(0)}</div>`
+  : `<div class="edu-initiales">${f.initiales || f.ecole_court.charAt(0)}</div>`;
 
     const annee = f.date_fin
       ? new Date(f.date_fin).getFullYear()

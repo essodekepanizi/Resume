@@ -460,6 +460,14 @@ section {
   display: flex; align-items: center; justify-content: center;
 }
 .edu-logo { width: 100%; height: 100%; object-fit: contain; }
+.edu-logo-2 {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  margin-left: 4px;
+  opacity: 0.85;
+  border: 1px solid var(--border2);
+}
 .edu-initiales {
   width: 32px; height: 32px;
   background: var(--gold-bg); border: 1px solid var(--gold-b);
@@ -472,6 +480,7 @@ section {
 .edu-ecole { font-size: 11px; color: var(--text2); }
 .edu-footer { display: flex; gap: 10px; align-items: center; }
 .edu-note { font-size: 12px; font-weight: 500; color: var(--gold); }
+
 
 /* ── CERTIFICATIONS ──────────────────────────────────────────── */
 .certs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }

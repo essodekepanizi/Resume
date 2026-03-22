@@ -183,9 +183,9 @@ function renderExperience(experiences) {
          <div class="exp-initiales" style="display:none">${exp.entreprise.charAt(0)}</div>`
       : `<div class="exp-initiales">${exp.entreprise.charAt(0)}</div>`;
 
-    const siteLink = exp.site
-      ? `<a href="${exp.site}" target="_blank" class="exp-link">${exp.site.replace('https://', '')} ↗</a>`
-      : '';
+    const siteLinks = [f.site, f.site2].filter(Boolean).map(s =>
+      `<a href="${s}" target="_blank" class="exp-link">${s.replace('https://', '')} ↗</a>`
+      ).join('');
 
     const comiteBadge = exp.comite_direction
       ? `<span class="exp-tag mgmt">${currentLang === 'fr' ? 'Comité de Direction' : 'Management Committee'}</span>`

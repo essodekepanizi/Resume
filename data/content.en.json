@@ -1,1 +1,486 @@
-
+{
+  "profil": {
+    "prenom": "Essodéké",
+    "nom": "PANIZI",
+    "titre": "Supply Chain Ops & Data",
+    "sous_titre": "Data Team Lead · Management Committee · Dakar, Senegal",
+    "positioning": "I <strong>digitalize and optimize</strong> B2B distribution networks in West Africa through Data and AI.",
+    "bio": "Data Team Lead and Supply Chain Analyst at MAAD Distribution, I have been driving the digital transformation of B2B distribution in Senegal for nearly 4 years — from supplier orders to field performance analysis across 18500+ stores.\n\nAs part of the management committee, I work in coordination with the Operations and Finance Director on key process implementation (purchasing, receiving, returns management, customer claims, damaged products) and provide expertise on warehouse, delivery, and fleet optimization.\n\nA recipient of the Togolese State Scholarship in Senegal (2016–2021), holding a Master's in SC Engineering (Université d'Artois, 16.2/20) and the MIT SCM MicroMasters (93/100), I am currently pursuing a dual Master's DSIA / MS2D (ESMT + 3iL) in Data Science and AI.",
+    "email": "spanizi11@gmail.com",
+    "telephone": "+221 77 783 51 02",
+    "linkedin": "https://www.linkedin.com/in/essodekepanizi/",
+    "localisation": "Dakar, Senegal",
+    "origine": "Lomé, Togo",
+    "langues": [
+      "French (native)",
+      "English (professional)"
+    ]
+  },
+  "stats": [
+    {
+      "valeur": "18500+",
+      "label": "Digitalized outlets"
+    },
+    {
+      "valeur": "7+",
+      "label": "Years of experience"
+    },
+    {
+      "valeur": "93/100",
+      "label": "MIT MicroMasters"
+    },
+    {
+      "valeur": "800+",
+      "label": "SKUs managed"
+    }
+  ],
+  "pills": [
+    "Supply Chain",
+    "Data Analytics",
+    "B2B Distribution",
+    "West Africa"
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "entreprise": "MAAD Distribution",
+      "site": "https://maad.io",
+      "logo": "https://maad.io/favicon.ico",
+      "titre": "Data Team Lead · Management Committee",
+      "date_debut": "2025-08-01",
+      "date_fin": null,
+      "lieu": "Dakar, Senegal",
+      "comite_direction": true,
+      "description": [
+        "Data team management (2 people on the Tech side) — business orientation, system knowledge, guided autonomy",
+        "Management committee member: participation in strategic and operational decisions in coordination with the Ops & Finance Director",
+        "Advisory role on operations optimization (warehouses, deliveries, fleet)",
+        "Cross-functional involvement: strategic management and operational support for field teams"
+      ],
+      "tags": [
+        "Data Leadership",
+        "PostgreSQL · Python",
+        "Node.js · Vue.js",
+        "B2B Distribution"
+      ]
+    },
+    {
+      "id": 2,
+      "entreprise": "MAAD Distribution",
+      "site": "https://maad.io",
+      "logo": "https://maad.io/favicon.ico",
+      "titre": "Supply Chain Analyst",
+      "date_debut": "2024-09-01",
+      "date_fin": null,
+      "lieu": "Dakar, Senegal",
+      "comite_direction": false,
+      "description": [
+        "Operational process design: supplier order → receiving → stock put-away, delivery returns collection, customer claims, damaged products, cycle count",
+        "KPI setup across all departments (Purchasing, Warehouse, Customer Service)",
+        "Data extraction, analysis, and visualization on key performance indicators",
+        "Purchase tracking via dedicated tracking files"
+      ],
+      "tags": [
+        "SC Analytics",
+        "SQL · Python",
+        "BI Dashboards",
+        "Process Design"
+      ]
+    },
+    {
+      "id": 3,
+      "entreprise": "MAAD Distribution",
+      "site": "https://maad.io",
+      "logo": "https://maad.io/favicon.ico",
+      "titre": "Senior Buyer — FMCG",
+      "date_debut": "2023-08-01",
+      "date_fin": "2024-09-01",
+      "lieu": "Dakar, Senegal",
+      "comite_direction": false,
+      "description": [
+        "Supervision of 3 junior buyers: training, coaching, overall performance monitoring",
+        "Maintained 70% availability rate on a ~800 SKU product catalog",
+        "Supplier relationship management: selection, evaluation, catalog, account reconciliation",
+        "Working capital (BFR) optimization, supplier credit negotiation"
+      ],
+      "tags": [
+        "Team management",
+        "800 SKUs",
+        "BFR · Negotiation"
+      ]
+    },
+    {
+      "id": 4,
+      "entreprise": "MAAD Distribution",
+      "site": "https://maad.io",
+      "logo": "https://maad.io/favicon.ico",
+      "titre": "Buyer — FMCG",
+      "date_debut": "2022-05-01",
+      "date_fin": "2023-08-01",
+      "lieu": "Dakar, Senegal",
+      "comite_direction": false,
+      "description": [
+        "Procurement, logistics coordination, upstream transport organization (EXW purchases)",
+        "Internal transfers, receipt verification, damaged products and supplier returns management",
+        "Supplier payment tracking"
+      ],
+      "tags": [
+        "Procurement",
+        "EXW Transport",
+        "Stock management"
+      ]
+    },
+    {
+      "id": 5,
+      "entreprise": "Compagnie Africaine de Commerce — CAC Senegal",
+      "site": null,
+      "logo": null,
+      "titre": "Administrative & E-Commerce Manager",
+      "date_debut": "2021-10-01",
+      "date_fin": "2022-05-01",
+      "lieu": "Dakar, Senegal",
+      "comite_direction": false,
+      "description": [
+        "Management of cacsenegal.com and Jumia Senegal partnership",
+        "Online order processing, weekly performance monitoring",
+        "Cyclic and periodic inventory counts, fraud detection",
+        "Tender submission file preparation"
+      ],
+      "tags": [
+        "E-Commerce",
+        "Jumia",
+        "Tenders"
+      ]
+    },
+    {
+      "id": 6,
+      "entreprise": "Jade E-Services Senegal — Jumia Group",
+      "site": "https://www.jumia.sn",
+      "logo": "https://www.jumia.sn/favicon.ico",
+      "titre": "Commercial · Key Account Manager",
+      "date_debut": "2019-02-01",
+      "date_fin": "2021-08-01",
+      "lieu": "Dakar, Senegal",
+      "comite_direction": false,
+      "description": [
+        "Management of a 15-vendor portfolio (Home Appliances) on Africa's leading e-commerce marketplace",
+        "KPI analysis: conversion rate, revenue, pageviews, items sold",
+        "Annual Joint Business Plan development and monitoring for strategic accounts",
+        "Replenishment, consignment stock management, product returns management",
+        "Employee of the Month (2020)"
+      ],
+      "tags": [
+        "Key Account",
+        "E-Commerce",
+        "KPI Analysis",
+        "Employee of Month 2020"
+      ]
+    }
+  ],
+  "formation": [
+    {
+      "id": 1,
+      "diplome": "MicroMasters in Supply Chain Management",
+      "ecole": "MIT — Massachusetts Institute of Technology",
+      "ecole_court": "MIT",
+      "site": "https://micromasters.mit.edu/scm/",
+      "logo": "https://www.mit.edu/favicon.ico",
+      "date_debut": "2021-07-01",
+      "date_fin": "2023-11-01",
+      "note": "93 / 100",
+      "statut": "obtenu",
+      "lieu": "Online (edX)"
+    },
+    {
+      "id": 2,
+      "diplome": "Master's in Supply Chain Engineering",
+      "ecole": "Université d'Artois × Centre Trainmar de Dakar",
+      "ecole_court": "Artois × Trainmar",
+      "site": null,
+      "logo": null,
+      "initiales": "UA",
+      "date_debut": "2019-01-01",
+      "date_fin": "2021-12-01",
+      "note": "16.2 / 20",
+      "statut": "obtenu",
+      "lieu": "Dakar, Senegal"
+    },
+    {
+      "id": 3,
+      "diplome": "Bachelor's in Commerce & International Development",
+      "ecole": "CNAM × Centre Trainmar de Dakar",
+      "ecole_court": "CNAM × Trainmar",
+      "site": null,
+      "logo": null,
+      "initiales": "CN",
+      "date_debut": "2017-01-01",
+      "date_fin": "2019-12-01",
+      "note": "15.6 / 20",
+      "statut": "obtenu",
+      "lieu": "Dakar, Senegal"
+    },
+    {
+      "id": 4,
+      "diplome": "Scientific Baccalaureate — Series C (Maths & Physics)",
+      "ecole": "Lycée d'Agoè-Nyivé Centre (LYAGO-C)",
+      "ecole_court": "LYAGO-C",
+      "site": null,
+      "logo": null,
+      "initiales": "LY",
+      "date_debut": "2013-09-01",
+      "date_fin": "2016-07-01",
+      "note": "16.5 / 20",
+      "statut": "obtenu",
+      "lieu": "Lomé, Togo"
+    },
+    {
+      "id": 5,
+      "diplome": "Master's in Data Science & AI (DSIA) + MS2D",
+      "ecole": "ESMT Dakar × 3iL Ingénieurs",
+      "ecole_court": "ESMT × 3iL",
+      "site": "https://www.esmt.sn",
+      "logo": "https://www.esmt.sn/favicon.ico",
+      "initiales": "ES",
+      "date_debut": "2026-01-01",
+      "date_fin": "2027-12-01",
+      "note": null,
+      "statut": "en_cours",
+      "lieu": "Dakar, Senegal"
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "nom": "CSCP — Certified Supply Chain Professional",
+      "organisme": "APICS / ASCM",
+      "site": "https://www.ascm.org/learning-development/certifications-credentials/cscp/",
+      "statut": "prevu",
+      "date_prevue": "2028-06-01",
+      "note": null
+    },
+    {
+      "id": 2,
+      "nom": "CTSC — Certified in Transformation for Supply Chain",
+      "organisme": "APICS / ASCM",
+      "site": "https://www.ascm.org/learning-development/certifications-credentials/ctsc/",
+      "statut": "prevu",
+      "date_prevue": "2029-01-01",
+      "note": null
+    },
+    {
+      "id": 3,
+      "nom": "EDBA — Executive Doctorate in Business Administration",
+      "organisme": "Dauphine-PSL Dakar",
+      "site": "https://dakar.dauphine.psl.eu/formations/executive-doctorate-in-business-administration-edba",
+      "statut": "prevu",
+      "date_prevue": "2029-09-01",
+      "note": null
+    },
+    {
+      "id": 4,
+      "nom": "UNICEF Logistics Certificate",
+      "organisme": "UNICEF",
+      "site": null,
+      "statut": "obtenu",
+      "date_prevue": null,
+      "note": null
+    },
+    {
+      "id": 5,
+      "nom": "Verified Certificate Supply Chain Design",
+      "organisme": "Coursera",
+      "site": null,
+      "statut": "obtenu",
+      "date_prevue": null,
+      "note": "2016"
+    },
+    {
+      "id": 6,
+      "nom": "End User Network Security",
+      "organisme": null,
+      "site": null,
+      "statut": "obtenu",
+      "date_prevue": null,
+      "note": null
+    }
+  ],
+  "competences": [
+    {
+      "categorie": "Supply Chain",
+      "items": [
+        "SC optimization & modeling",
+        "Demand planning",
+        "Procurement",
+        "Inventory management",
+        "SCOR Model"
+      ]
+    },
+    {
+      "categorie": "Data & BI",
+      "items": [
+        "Python",
+        "PostgreSQL / BigQuery",
+        "Power BI · Looker Studio",
+        "MS Excel (Power Pivot)",
+        "Orange Data Mining"
+      ]
+    },
+    {
+      "categorie": "Ops & Tech",
+      "items": [
+        "Odoo ERP",
+        "Node.js · Vue.js",
+        "Google Apps Script",
+        "HTML · CSS · WordPress",
+        "G-Suite · MS Office"
+      ]
+    },
+    {
+      "categorie": "Management",
+      "items": [
+        "Management committee",
+        "Data team lead",
+        "Ops process design",
+        "Financial analysis",
+        "Probability & Statistics"
+      ]
+    }
+  ],
+  "projets": [
+    {
+      "id": 1,
+      "titre": "B2B Distribution Digitalization — MAAD Distribution",
+      "tag": "Supply Chain · B2B Distribution",
+      "tag_type": "sc",
+      "description": "Deployment and management of the digital distribution platform for 18500+ neighborhood stores in Senegal. End-to-end operational workflow design, multi-campaign KPI dashboards, GPS mapping of ~130 Senegalese markets, daily report automation.",
+      "metriques": [
+        "18500+ retail outlets",
+        "20,000+ deliveries/month",
+        "PostgreSQL · Node.js · Vue.js",
+        "3 warehouses managed"
+      ],
+      "featured": true
+    },
+    {
+      "id": 2,
+      "titre": "SC Performance Dashboards",
+      "tag": "Data · BI",
+      "tag_type": "data",
+      "description": "Multi-campaign dashboards: KPI tracking, submission modification analysis, automated daily reports via Google Apps Script + Heroku Dataclips.",
+      "metriques": [
+        "GAS · Heroku · SQL",
+        "Daily automation"
+      ],
+      "featured": false
+    },
+    {
+      "id": 3,
+      "titre": "Stock Returns Management System",
+      "tag": "Ops · Inventory",
+      "tag_type": "ops",
+      "description": "Returns Warehouse workflow: flows to Pikine Hangar and STOCK QUARANTINE, multi-step validations, field agent mobile API.",
+      "metriques": [
+        "3 warehouses · 2 campaigns",
+        "REST API · PostgreSQL"
+      ],
+      "featured": false
+    },
+    {
+      "id": 4,
+      "titre": "Interactive Wholesaler Map — Senegal",
+      "tag": "SC · Mapping",
+      "tag_type": "sc",
+      "description": "Wholesaler mapping interface with cascading geographic filters and performance metrics. ~130 markets geocoded with field GPS data.",
+      "metriques": [
+        "Leaflet.js · PostgreSQL",
+        "~130 markets"
+      ],
+      "featured": false
+    },
+    {
+      "id": 5,
+      "titre": "Logistics Network Design — SCOR Model",
+      "tag": "SC · Academic",
+      "tag_type": "sc",
+      "description": "Academic project (Université d'Artois × CTD): logistics network design based on the SCOR model. Group leader.",
+      "metriques": [
+        "SCOR Framework",
+        "Univ. Artois · CTD"
+      ],
+      "featured": false
+    }
+  ],
+  "distinctions": [
+    {
+      "annee": "2020",
+      "titre": "Employee of the Month",
+      "description": "Jumia Senegal — Commercial performance recognition"
+    },
+    {
+      "annee": "2016–21",
+      "titre": "Togolese State Scholar",
+      "description": "Scholarship to study in Senegal · 5 years"
+    },
+    {
+      "annee": "2018",
+      "titre": "English Club Founder",
+      "description": "Dakar Air Academy · 15 members"
+    },
+    {
+      "annee": "2016",
+      "titre": "Black History Month Quiz Winner",
+      "description": "US Embassy · TETO · Team leader (3 members)"
+    }
+  ],
+  "blog": [
+    {
+      "id": 1,
+      "titre": "Why informal distribution in Africa is a SC innovation lab",
+      "extrait": "The constraints of informal markets force SC solutions that formal markets have never had to design.",
+      "date": null,
+      "statut": "a_venir",
+      "slug": "informal-distribution-africa-sc-innovation"
+    },
+    {
+      "id": 2,
+      "titre": "From Jumia to MAAD: what e-commerce taught me about real logistics",
+      "extrait": "Managing 15 vendors at Jumia then leading physical B2B distribution — convergences and fractures between both worlds.",
+      "date": null,
+      "statut": "a_venir",
+      "slug": "jumia-maad-ecommerce-logistics"
+    },
+    {
+      "id": 3,
+      "titre": "CSCP vs CTSC: which APICS path for a West Africa SC profile?",
+      "extrait": "My certification strategy for targeting international NGOs and multinationals from Dakar.",
+      "date": null,
+      "statut": "a_venir",
+      "slug": "cscp-ctsc-apics-west-africa"
+    }
+  ],
+  "publications": [
+    {
+      "annee": "2026",
+      "titre": "B2B Distribution Digitalization in West Africa: Lessons from a Field Study in Senegal",
+      "meta": "Working paper in progress · MAAD Distribution data · EDBA thesis foundation",
+      "tags": [
+        "Supply Chain",
+        "Digitalization",
+        "B2B Distribution",
+        "West Africa"
+      ],
+      "statut": "en_cours"
+    },
+    {
+      "annee": "2029",
+      "titre": "EDBA Thesis — Data-driven transformation of supply chains in sub-Saharan Africa",
+      "meta": "Thesis project · EDBA Dauphine-PSL Dakar · 2029–2032",
+      "tags": [
+        "EDBA",
+        "Dauphine-PSL",
+        "Applied research"
+      ],
+      "statut": "prevu"
+    }
+  ]
+}

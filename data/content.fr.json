@@ -196,8 +196,8 @@
       "diplome": "Master en Ingénierie de la Chaîne Logistique",
       "ecole": "Université d'Artois × Centre Trainmar de Dakar",
       "ecole_court": "Artois × Trainmar",
-      "site": null,
-      "logo": null,
+      "site": "https://www.univ-artois.fr",
+      "logo": "https://www.univ-artois.fr/favicon.ico"
       "initiales": "UA",
       "date_debut": "2019-01-01",
       "date_fin": "2021-12-01",
@@ -210,8 +210,10 @@
       "diplome": "Licence Commerce & Développement International",
       "ecole": "CNAM × Centre Trainmar de Dakar",
       "ecole_court": "CNAM × Trainmar",
-      "site": null,
-      "logo": null,
+      "site1":"https://www.cnam.fr",
+      "site2":"https://trainmar.sn",
+      "logo": "https://www.cnam.fr/favicon.ico",
+      "logo2": "https://trainmar.sn/favicon.ico"
       "initiales": "CN",
       "date_debut": "2017-01-01",
       "date_fin": "2019-12-01",
@@ -239,7 +241,8 @@
       "ecole": "ESMT Dakar × 3iL Ingénieurs",
       "ecole_court": "ESMT × 3iL",
       "site": "https://www.esmt.sn",
-      "logo": "https://www.esmt.sn/favicon.ico",
+      "logo": "https://www.esmt.sn/sites/all/themes/custom/esmt/logo.png"
+      "logo2": "https://www.3il-ingenieurs.fr/dist/images/logo_3il-small.svg"
       "initiales": "ES",
       "date_debut": "2026-01-01",
       "date_fin": "2027-12-01",
@@ -288,8 +291,8 @@
     {
       "id": 5,
       "nom": "Certificat Vérifié Supply Chain Design",
-      "organisme": "Coursera",
-      "site": null,
+      "organisme": "edX",
+      "site": "https://edx.org",
       "statut": "obtenu",
       "date_prevue": null,
       "note": "2016"

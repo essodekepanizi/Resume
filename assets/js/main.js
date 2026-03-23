@@ -183,7 +183,8 @@ function renderExperience(experiences) {
          <div class="exp-initiales" style="display:none">${exp.entreprise.charAt(0)}</div>`
       : `<div class="exp-initiales">${exp.entreprise.charAt(0)}</div>`;
 
-    const siteLinks = [f.site, f.site2].filter(Boolean).map(s =>
+      // CORRECTION
+    const siteLinks = [exp.site, exp.site2].filter(Boolean).map(s =>
       `<a href="${s}" target="_blank" class="exp-link">${s.replace('https://', '')} ↗</a>`
       ).join('');
 
@@ -195,7 +196,7 @@ function renderExperience(experiences) {
       <div class="exp-left">
         <div class="exp-logo-wrap">${logoHTML}</div>
         <div class="exp-period">${periode}<br><span class="exp-duree">${duree}</span></div>
-        ${siteLink}
+        ${siteLinks}
       </div>
       <div class="exp-right">
         <div class="exp-co">${exp.entreprise}</div>

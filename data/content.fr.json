@@ -411,7 +411,19 @@
         "Univ. d'Artois · CTD"
       ],
       "featured": false
-    }
+    },
+    {
+      "id": 6,
+      "titre": "Africa Supply Chain & Data Lab (ASDL)",
+      "tag": "Vision · Fondation",
+      "tag_type": "vision",
+      "description": "Laboratoire de recherche, conseil et renforcement des capacités en Supply Chain et Data pour l'Afrique. Recherche appliquée, formations certifiantes APICS, conseil opérationnel — ancré à Dakar, vocation continentale.",
+      "metriques": [
+        "Fondation prévue 2032+",
+        "Post-EDBA Dauphine-PSL"
+      ],
+    "featured": true
+  }
   ],
   "distinctions": [
     {

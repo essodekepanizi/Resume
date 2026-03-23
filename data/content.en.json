@@ -196,8 +196,8 @@
       "diplome": "Master's in Supply Chain Engineering",
       "ecole": "Université d'Artois × Centre Trainmar de Dakar",
       "ecole_court": "Artois × Trainmar",
-      "site": null,
-      "logo": null,
+      "site": "https://www.univ-artois.fr",
+      "logo": "https://www.univ-artois.fr/favicon.ico",
       "initiales": "UA",
       "date_debut": "2019-01-01",
       "date_fin": "2021-12-01",
@@ -210,8 +210,10 @@
       "diplome": "Bachelor's in Commerce & International Development",
       "ecole": "CNAM × Centre Trainmar de Dakar",
       "ecole_court": "CNAM × Trainmar",
-      "site": null,
-      "logo": null,
+      "site": "https://www.cnam.fr",
+      "site2": "https://trainmar.sn",
+      "logo": "https://www.cnam.fr/favicon.ico",
+      "logo2": "https://trainmar.sn/favicon.ico",
       "initiales": "CN",
       "date_debut": "2017-01-01",
       "date_fin": "2019-12-01",
@@ -240,6 +242,7 @@
       "ecole_court": "ESMT × 3iL",
       "site": "https://www.esmt.sn",
       "logo": "https://www.esmt.sn/favicon.ico",
+      "logo2": "https://www.3il-ingenieurs.fr/dist/images/logo_3il-small.svg",
       "initiales": "ES",
       "date_debut": "2026-01-01",
       "date_fin": "2027-12-01",
@@ -408,6 +411,18 @@
         "Univ. Artois · CTD"
       ],
       "featured": false
+    },
+    {
+      "id": 6,
+      "titre": "Africa Supply Chain & Data Lab (ASDL)",
+      "tag": "Vision · Foundation",
+      "tag_type": "vision",
+      "description": "Research, consulting and capacity-building lab in Supply Chain and Data for Africa. Applied research, APICS certification training, operational consulting — based in Dakar, continental vocation.",
+      "metriques": [
+        "Foundation planned 2032+",
+        "Post-EDBA Dauphine-PSL"
+      ],
+      "featured": true
     }
   ],
   "distinctions": [

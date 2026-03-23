@@ -383,6 +383,11 @@ section {
 .proj-tag.sc   { background: var(--teal-bg); color: var(--teal-l); border: 1px solid var(--teal-b); }
 .proj-tag.data { background: var(--gold-bg); color: var(--gold-l); border: 1px solid var(--gold-b); }
 .proj-tag.ops  { background: rgba(255,255,255,.03); color: var(--text2); border: 1px solid var(--border2); }
+.proj-tag.vision {
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  border-color: rgba(139, 92, 246, 0.3);
+}
 .proj-title {
   font-family: 'IBM Plex Serif', serif;
   font-size: 16px; font-weight: 400; color: var(--text);
